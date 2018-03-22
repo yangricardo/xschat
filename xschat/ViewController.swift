@@ -22,11 +22,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let name = "rpaskin"
             let message = inputText.text!
 
-            chatMessages.append((name, message))
+            chatMessages.insert((name, message), at: 0)
             chatTableView.reloadData()
 
+            inputText.text = ""
+            
             let parameters: Parameters = [
-                "text": "start",
+                "text": message,
                 "chat": [
                     "id": "rpaskin"
                 ],
@@ -42,14 +44,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Request: \(String(describing: response.request))")   // original url request
                 print("Response: \(String(describing: response.response))") // http url response
                 print("Result: \(response.result)")                         // response serialization result
-                
+
+//                debugPrint(response)
+
                 if let json = response.result.value {
                     print("JSON: \(json)") // serialized json response
+
+                    let response = json as! NSDictionary
+                    
+                    //example if there is an id
+                    let name = response.object(forKey: "uid")! as! String
+                    let text = response.object(forKey: "text")! as! String
+
+//                    self.chatMessages.append((name, text))
+                    self.chatMessages.insert((name, text), at: 0)
+
+                    self.chatTableView.reloadData()
                 }
                 
-                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                    print("Data: \(utf8Text)") // original server data as UTF8 string
-                }
+//                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+//                    print("Data: \(utf8Text)") // original server data as UTF8 string
+//                }
             }
         }
         else {
@@ -77,6 +92,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         chatTableView.delegate = self
         chatTableView.dataSource = self
+
+        chatTableView.rowHeight = UITableViewAutomaticDimension
+        chatTableView.estimatedRowHeight = 100
     }
 
     override func didReceiveMemoryWarning() {
