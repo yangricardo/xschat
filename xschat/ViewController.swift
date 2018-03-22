@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var cores:[UIColor] = [.lightGray, .white]
+    
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var inputText: UITextField!
     
@@ -76,14 +78,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = chatTableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = chatTableView.dequeueReusableCell(withIdentifier: "cell") as! chatTableViewCell
 
         let (name, message) = chatMessages[indexPath.row]
-        
-        cell?.textLabel?.text = name
-        cell?.detailTextLabel?.text = message
 
-        return cell!
+        cell.sender.text = name
+        cell.msg.text = message
+        cell.backgroundColor = cores[indexPath.row % 2]
+        
+//        cell?.textLabel?.text = name
+//        cell?.detailTextLabel?.text = message
+
+        return cell
     }
     
     override func viewDidLoad() {
@@ -92,6 +98,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         chatTableView.delegate = self
         chatTableView.dataSource = self
+
+        chatMessages = chatMessages.reversed()
 
         chatTableView.rowHeight = UITableViewAutomaticDimension
         chatTableView.estimatedRowHeight = 100

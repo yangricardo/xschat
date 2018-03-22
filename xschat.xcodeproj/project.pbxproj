@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A26D2932064623B00476BC4 /* chatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26D2922064623B00476BC4 /* chatTableViewCell.swift */; };
 		0AA07DB62063F141006E6557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA07DB52063F141006E6557 /* AppDelegate.swift */; };
 		0AA07DB82063F141006E6557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA07DB72063F141006E6557 /* ViewController.swift */; };
 		0AA07DBB2063F141006E6557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DB92063F141006E6557 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A26D2922064623B00476BC4 /* chatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewCell.swift; sourceTree = "<group>"; };
 		0AA07DB22063F141006E6557 /* xschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA07DB52063F141006E6557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AA07DB72063F141006E6557 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				0AA07DB52063F141006E6557 /* AppDelegate.swift */,
 				0AA07DB72063F141006E6557 /* ViewController.swift */,
 				0AA07DB92063F141006E6557 /* Main.storyboard */,
+				0A26D2922064623B00476BC4 /* chatTableViewCell.swift */,
 				0AA07DBC2063F141006E6557 /* Assets.xcassets */,
 				0AA07DBE2063F141006E6557 /* LaunchScreen.storyboard */,
 				0AA07DC12063F141006E6557 /* Info.plist */,
@@ -219,6 +222,7 @@
 			files = (
 				0AA07DB82063F141006E6557 /* ViewController.swift in Sources */,
 				0AA07DB62063F141006E6557 /* AppDelegate.swift in Sources */,
+				0A26D2932064623B00476BC4 /* chatTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
