@@ -6,6 +6,7 @@
 //  Copyright © 2018 Megaputz. All rights reserved.
 //
 
+import Alamofire
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -23,6 +24,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
             chatMessages.append((name, message))
             chatTableView.reloadData()
+
+            let parameters: Parameters = [
+                "text": "start",
+                "chat": [
+                    "id": "rpaskin"
+                ],
+                "from": [
+                    "id": "user_1",
+                    "first_name": "Joao",
+                    "last_name": "Silva",
+                    "username": "user_1"
+                ]
+            ]
+            
+            Alamofire.request("http://chatbot.les.inf.puc-rio.br:8080/message", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+                print("Request: \(String(describing: response.request))")   // original url request
+                print("Response: \(String(describing: response.response))") // http url response
+                print("Result: \(response.result)")                         // response serialization result
+                
+                if let json = response.result.value {
+                    print("JSON: \(json)") // serialized json response
+                }
+                
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+            }
         }
         else {
             print("mensagem vazia!")

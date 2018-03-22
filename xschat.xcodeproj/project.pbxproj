@@ -12,6 +12,7 @@
 		0AA07DBB2063F141006E6557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DB92063F141006E6557 /* Main.storyboard */; };
 		0AA07DBD2063F141006E6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DBC2063F141006E6557 /* Assets.xcassets */; };
 		0AA07DC02063F141006E6557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DBE2063F141006E6557 /* LaunchScreen.storyboard */; };
+		8F2EBE6D34BE8467C075E72C /* Pods_xschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0AA07DBC2063F141006E6557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA07DBF2063F141006E6557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AA07DC12063F141006E6557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xschat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1AA7C01A1DBF2EAFD16CBD /* Pods-xschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-xschat/Pods-xschat.release.xcconfig"; sourceTree = "<group>"; };
+		FCDB9D3E0B9140BB54539214 /* Pods-xschat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xschat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xschat/Pods-xschat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2EBE6D34BE8467C075E72C /* Pods_xschat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				0AA07DB42063F141006E6557 /* xschat */,
 				0AA07DB32063F141006E6557 /* Products */,
+				A652C12FEC29DFC145EFCA53 /* Pods */,
+				A177164DF7FB17D2F4E0FDD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = xschat;
 			sourceTree = "<group>";
 		};
+		A177164DF7FB17D2F4E0FDD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A652C12FEC29DFC145EFCA53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB9D3E0B9140BB54539214 /* Pods-xschat.debug.xcconfig */,
+				BE1AA7C01A1DBF2EAFD16CBD /* Pods-xschat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AA07DC42063F141006E6557 /* Build configuration list for PBXNativeTarget "xschat" */;
 			buildPhases = (
+				41C53DC696604AFB3372D621 /* [CP] Check Pods Manifest.lock */,
 				0AA07DAE2063F141006E6557 /* Sources */,
 				0AA07DAF2063F141006E6557 /* Frameworks */,
 				0AA07DB02063F141006E6557 /* Resources */,
+				AD52907ECB30C64C574EF3E0 /* [CP] Embed Pods Frameworks */,
+				79860B95A3238E52232C14B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41C53DC696604AFB3372D621 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xschat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79860B95A3238E52232C14B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xschat/Pods-xschat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD52907ECB30C64C574EF3E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-xschat/Pods-xschat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-xschat/Pods-xschat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AA07DAE2063F141006E6557 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		0AA07DC52063F141006E6557 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCDB9D3E0B9140BB54539214 /* Pods-xschat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		0AA07DC62063F141006E6557 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE1AA7C01A1DBF2EAFD16CBD /* Pods-xschat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
