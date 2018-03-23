@@ -18,15 +18,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var chatMessages = [("rpaskin","oi"), ("jsilva","tudo bom?"), ("rpaskin", "tudo"), ("ssalgado", "alguém quer um doce?")]
     
+    // Return pressed inside input text
+    @IBAction func inputTextReturnPressed(_ sender: UITextField) {
+        sendToServer()
+    }
+
+    // Pressed "Send" key
     @IBAction func enviarTouched(_ sender: UIButton) {
-        
+        sendToServer()
+    }
+    func sendToServer() {
         if inputText.hasText {
             let name = "rpaskin"
             let message = inputText.text!
-
+            
             chatMessages.insert((name, message), at: 0)
             chatTableView.reloadData()
-
+            
             inputText.text = ""
             
             let parameters: Parameters = [
@@ -46,33 +54,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Request: \(String(describing: response.request))")   // original url request
                 print("Response: \(String(describing: response.response))") // http url response
                 print("Result: \(response.result)")                         // response serialization result
-
-//                debugPrint(response)
-
+                
+                //                debugPrint(response)
+                
                 if let json = response.result.value {
                     print("JSON: \(json)") // serialized json response
-
+                    
                     let response = json as! NSDictionary
                     
                     //example if there is an id
                     let name = response.object(forKey: "uid")! as! String
                     let text = response.object(forKey: "text")! as! String
-
-//                    self.chatMessages.append((name, text))
+                    
+                    //                    self.chatMessages.append((name, text))
                     self.chatMessages.insert((name, text), at: 0)
-
+                    
                     self.chatTableView.reloadData()
                 }
                 
-//                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                    print("Data: \(utf8Text)") // original server data as UTF8 string
-//                }
+                //                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                //                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                //                }
             }
         }
         else {
             print("mensagem vazia!")
         }
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chatMessages.count
     }
@@ -86,9 +95,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.msg.text = message
         cell.backgroundColor = cores[indexPath.row % 2]
         
-//        cell?.textLabel?.text = name
-//        cell?.detailTextLabel?.text = message
-
         return cell
     }
     
