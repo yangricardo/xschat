@@ -29,17 +29,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTH-IN-ZhM">
-                                                    <rect key="frame" x="5" y="15" width="45" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JTH-IN-ZhM">
+                                                    <rect key="frame" x="5" y="0.0" width="60" height="43.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="pX5-dk-XTg"/>
+                                                        <constraint firstAttribute="width" constant="60" id="1py-Pm-8Nu"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="msg" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PU0-Gk-xtH">
-                                                    <rect key="frame" x="55" y="0.0" width="320" height="44"/>
+                                                    <rect key="frame" x="70" y="0.0" width="305" height="42.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,6 +49,9 @@
                                                 <constraint firstItem="PU0-Gk-xtH" firstAttribute="leading" secondItem="JTH-IN-ZhM" secondAttribute="trailing" constant="5" id="0aj-P7-IFh"/>
                                                 <constraint firstItem="PU0-Gk-xtH" firstAttribute="top" secondItem="OUx-04-aYd" secondAttribute="top" id="EV8-ER-xsd"/>
                                                 <constraint firstItem="PU0-Gk-xtH" firstAttribute="centerY" secondItem="JTH-IN-ZhM" secondAttribute="centerY" id="S2B-rH-THs"/>
+                                                <constraint firstItem="PU0-Gk-xtH" firstAttribute="leading" secondItem="JTH-IN-ZhM" secondAttribute="trailing" constant="5" id="XsV-AY-jgo"/>
+                                                <constraint firstItem="JTH-IN-ZhM" firstAttribute="top" secondItem="OUx-04-aYd" secondAttribute="top" id="bo5-Bf-eg1"/>
+                                                <constraint firstAttribute="bottom" secondItem="JTH-IN-ZhM" secondAttribute="bottom" id="ciK-w2-SLd"/>
                                                 <constraint firstItem="JTH-IN-ZhM" firstAttribute="leading" secondItem="OUx-04-aYd" secondAttribute="leading" constant="5" id="pBu-K0-zAX"/>
                                                 <constraint firstAttribute="trailing" secondItem="PU0-Gk-xtH" secondAttribute="trailing" id="shp-87-wb0"/>
                                                 <constraint firstItem="JTH-IN-ZhM" firstAttribute="centerY" secondItem="OUx-04-aYd" secondAttribute="centerY" id="z0U-iC-w1U"/>

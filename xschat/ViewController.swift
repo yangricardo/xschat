@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var cores:[UIColor] = [.lightGray, .white]
+    var cores:[UIColor] = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.15), .white]
     
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var inputText: UITextField!
@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let message = inputText.text!
             
             chatMessages.insert((name, message), at: 0)
+//            chatMessages.append((name, message))
             chatTableView.reloadData()
             
             inputText.text = ""
@@ -68,7 +69,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     //                    self.chatMessages.append((name, text))
                     self.chatMessages.insert((name, text), at: 0)
-                    
+//                    self.chatMessages.append((name, text))
+
                     self.chatTableView.reloadData()
                 }
                 
