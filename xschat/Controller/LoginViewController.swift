@@ -36,4 +36,7 @@ class LoginViewController: UIViewController {
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let chatVC = segue.destination as? ChatViewController else { return } // only continue if we have the destination view controller
+    }
 }

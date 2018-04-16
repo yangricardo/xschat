@@ -11,4 +11,6 @@ import UIKit
 class chatTableViewCell: UITableViewCell {
     @IBOutlet weak var sender: UILabel!
     @IBOutlet weak var msg: UILabel!
+
+    
 }

@@ -10,6 +10,7 @@ import Alamofire
 import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var chat:Chat = Chat(chat_id: "rpaskin", first_name: "Ronnie", last_name: "Paskin", username: "rpaskin")
 
     var cores:[UIColor] = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.15), .white]
 
@@ -32,22 +33,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             let name = "rpaskin"
             let message = inputText.text!
             
-            chatMessages.insert((name, message), at: 0)
-            //            chatMessages.append((name, message))
+            chatMessages.insert((name, message), at: 0) // adds to top of list
+            // chatMessages.append((name, message))     // adds to end of list (NOT)
             chatTableView.reloadData()
             
             inputText.text = ""
-            
+
             let parameters: Parameters = [
                 "text": message,
                 "chat": [
-                    "id": "rpaskin"
+                    "id": chat.chat_id
                 ],
                 "from": [
-                    "id": "user_1",
-                    "first_name": "Joao",
-                    "last_name": "Silva",
-                    "username": "user_1"
+                    "id": chat.username,
+                    "first_name": chat.first_name,
+                    "last_name": chat.last_name,
+                    "username": chat.username
                 ]
             ]
             
