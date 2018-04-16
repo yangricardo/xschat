@@ -21,8 +21,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cyberman" translatesAutoresizingMaskIntoConstraints="NO" id="J1q-GC-TJy">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat Bot Simples" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vah-U2-GTP">
+                                <rect key="frame" x="77" y="84" width="222.5" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be assimilated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izl-aF-mhZ">
+                                <rect key="frame" x="104" y="627.5" width="168.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="les" translatesAutoresizingMaskIntoConstraints="NO" id="dEk-dO-Qsk">
+                                <rect key="frame" x="314.5" y="607" width="40.5" height="40"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7As-mv-txj">
-                                <rect key="frame" x="80" y="225.5" width="215" height="216"/>
+                                <rect key="frame" x="80" y="341" width="215" height="216"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="chat id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7de-RX-fAR">
                                         <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
@@ -59,58 +76,31 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hNl-0C-Csz" secondAttribute="trailing" id="2rc-rG-e2V"/>
-                                    <constraint firstItem="7de-RX-fAR" firstAttribute="leading" secondItem="7As-mv-txj" secondAttribute="leading" id="8ap-q4-13W"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ta4-k7-7FN" secondAttribute="trailing" id="Eue-hr-s2v"/>
-                                    <constraint firstAttribute="trailing" secondItem="7de-RX-fAR" secondAttribute="trailing" id="GMe-rE-ZJb"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zz7-jp-OAg" secondAttribute="trailing" id="IVQ-IE-kIr"/>
-                                    <constraint firstItem="Zz7-jp-OAg" firstAttribute="leading" secondItem="7As-mv-txj" secondAttribute="leading" id="Upn-M0-w6s"/>
-                                    <constraint firstItem="Ta4-k7-7FN" firstAttribute="leading" secondItem="7As-mv-txj" secondAttribute="leading" id="YNZ-i7-ijh"/>
-                                    <constraint firstItem="hNl-0C-Csz" firstAttribute="leading" secondItem="7As-mv-txj" secondAttribute="leading" id="ZSN-Ek-hU0"/>
-                                    <constraint firstAttribute="trailing" secondItem="mp7-nk-Da6" secondAttribute="trailing" id="cvt-L7-mxg"/>
-                                    <constraint firstItem="mp7-nk-Da6" firstAttribute="leading" secondItem="7As-mv-txj" secondAttribute="leading" id="qP8-7W-7CS"/>
+                                    <constraint firstItem="7de-RX-fAR" firstAttribute="leading" secondItem="hNl-0C-Csz" secondAttribute="leading" id="1jk-7u-0BX"/>
+                                    <constraint firstItem="hNl-0C-Csz" firstAttribute="leading" secondItem="Ta4-k7-7FN" secondAttribute="leading" id="7ip-NK-feL"/>
+                                    <constraint firstItem="Ta4-k7-7FN" firstAttribute="leading" secondItem="Zz7-jp-OAg" secondAttribute="leading" id="Lyk-jd-0jD"/>
+                                    <constraint firstItem="7de-RX-fAR" firstAttribute="leading" secondItem="7As-mv-txj" secondAttribute="leading" id="VVS-hv-f8n"/>
+                                    <constraint firstItem="Zz7-jp-OAg" firstAttribute="leading" secondItem="mp7-nk-Da6" secondAttribute="leading" id="fWK-sj-lss"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be assimilated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izl-aF-mhZ">
-                                <rect key="frame" x="103.5" y="626.5" width="168.5" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="les" translatesAutoresizingMaskIntoConstraints="NO" id="dEk-dO-Qsk">
-                                <rect key="frame" x="315" y="607" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="4gL-N3-Iuq"/>
-                                    <constraint firstAttribute="height" constant="40" id="N8a-gL-6cS"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat Bot Simples" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vah-U2-GTP">
-                                <rect key="frame" x="76.5" y="84" width="222.5" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9gO-ZM-FkS" firstAttribute="trailing" secondItem="7As-mv-txj" secondAttribute="trailing" constant="80" id="1iL-g0-we5"/>
-                            <constraint firstItem="9gO-ZM-FkS" firstAttribute="trailing" secondItem="dEk-dO-Qsk" secondAttribute="trailing" constant="20" id="2Z9-LA-KL1"/>
-                            <constraint firstItem="vah-U2-GTP" firstAttribute="centerX" secondItem="nKn-A1-LCh" secondAttribute="centerX" id="7gg-DH-ygd"/>
-                            <constraint firstItem="vah-U2-GTP" firstAttribute="top" secondItem="9gO-ZM-FkS" secondAttribute="top" constant="20" id="A8m-aH-5yo"/>
-                            <constraint firstItem="J1q-GC-TJy" firstAttribute="bottom" secondItem="9gO-ZM-FkS" secondAttribute="bottom" id="Ihj-WD-Tdi"/>
-                            <constraint firstItem="J1q-GC-TJy" firstAttribute="leading" secondItem="9gO-ZM-FkS" secondAttribute="leading" id="THL-oU-Kpu"/>
-                            <constraint firstItem="7As-mv-txj" firstAttribute="leading" secondItem="9gO-ZM-FkS" secondAttribute="leading" constant="80" id="TdJ-Ni-6JA"/>
-                            <constraint firstItem="7As-mv-txj" firstAttribute="centerX" secondItem="nKn-A1-LCh" secondAttribute="centerX" id="XBK-Vn-n8a"/>
-                            <constraint firstItem="7As-mv-txj" firstAttribute="centerY" secondItem="nKn-A1-LCh" secondAttribute="centerY" id="YQT-A8-MZu"/>
-                            <constraint firstItem="izl-aF-mhZ" firstAttribute="centerX" secondItem="nKn-A1-LCh" secondAttribute="centerX" id="bBg-mc-VP2"/>
-                            <constraint firstItem="J1q-GC-TJy" firstAttribute="trailing" secondItem="9gO-ZM-FkS" secondAttribute="trailing" id="gAl-eJ-AnX"/>
-                            <constraint firstItem="9gO-ZM-FkS" firstAttribute="bottom" secondItem="izl-aF-mhZ" secondAttribute="bottom" constant="19" id="gIJ-KH-BiV"/>
-                            <constraint firstItem="J1q-GC-TJy" firstAttribute="top" secondItem="9gO-ZM-FkS" secondAttribute="top" id="i7V-ay-NPS"/>
-                            <constraint firstItem="7As-mv-txj" firstAttribute="centerX" secondItem="nKn-A1-LCh" secondAttribute="centerX" id="mV0-x8-ooJ"/>
-                            <constraint firstItem="9gO-ZM-FkS" firstAttribute="bottom" secondItem="dEk-dO-Qsk" secondAttribute="bottom" constant="20" id="nK4-3b-ETl"/>
-                            <constraint firstItem="7As-mv-txj" firstAttribute="centerY" secondItem="nKn-A1-LCh" secondAttribute="centerY" id="s3L-2K-yHk"/>
+                            <constraint firstItem="9gO-ZM-FkS" firstAttribute="trailing" secondItem="dEk-dO-Qsk" secondAttribute="trailing" constant="20" id="544-6U-0SP"/>
+                            <constraint firstItem="vah-U2-GTP" firstAttribute="leading" secondItem="9gO-ZM-FkS" secondAttribute="leading" constant="77" id="6GD-yt-MuS"/>
+                            <constraint firstItem="9gO-ZM-FkS" firstAttribute="bottom" secondItem="izl-aF-mhZ" secondAttribute="bottom" constant="18" id="9dg-eS-1So"/>
+                            <constraint firstItem="J1q-GC-TJy" firstAttribute="leading" secondItem="nKn-A1-LCh" secondAttribute="leading" id="DiI-uZ-knS"/>
+                            <constraint firstItem="vah-U2-GTP" firstAttribute="top" secondItem="9gO-ZM-FkS" secondAttribute="top" constant="20" id="O87-bP-TL6"/>
+                            <constraint firstAttribute="bottom" secondItem="dEk-dO-Qsk" secondAttribute="bottom" constant="20" symbolic="YES" id="SEm-8C-FPF"/>
+                            <constraint firstItem="vah-U2-GTP" firstAttribute="centerX" secondItem="izl-aF-mhZ" secondAttribute="centerX" id="SWm-9T-qm7"/>
+                            <constraint firstItem="dEk-dO-Qsk" firstAttribute="leading" secondItem="izl-aF-mhZ" secondAttribute="trailing" constant="42" id="Vy0-SH-cWp"/>
+                            <constraint firstItem="dEk-dO-Qsk" firstAttribute="top" secondItem="9gO-ZM-FkS" secondAttribute="top" constant="543" id="WM7-S8-ST8"/>
+                            <constraint firstItem="J1q-GC-TJy" firstAttribute="centerX" secondItem="7As-mv-txj" secondAttribute="centerX" id="aIK-26-aF0"/>
+                            <constraint firstItem="izl-aF-mhZ" firstAttribute="top" secondItem="7As-mv-txj" secondAttribute="bottom" constant="70" id="eQx-0V-qLq"/>
+                            <constraint firstItem="J1q-GC-TJy" firstAttribute="top" secondItem="9gO-ZM-FkS" secondAttribute="top" id="fgH-Hf-RXr"/>
+                            <constraint firstItem="7As-mv-txj" firstAttribute="leading" secondItem="9gO-ZM-FkS" secondAttribute="leading" constant="80" id="fje-bm-lkJ"/>
+                            <constraint firstAttribute="trailing" secondItem="J1q-GC-TJy" secondAttribute="trailing" id="t1M-bC-nsm"/>
+                            <constraint firstItem="J1q-GC-TJy" firstAttribute="bottom" secondItem="9gO-ZM-FkS" secondAttribute="bottom" id="vlT-sb-R7M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9gO-ZM-FkS"/>
                     </view>

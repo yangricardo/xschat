@@ -10,15 +10,15 @@ import Alamofire
 import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var chat:Chat = Chat(chat_id: "rpaskin", first_name: "Ronnie", last_name: "Paskin", username: "rpaskin")
+    var chat:Chat = Chat(chat_id: nil, first_name: nil, last_name: nil, username: nil, messages: [])
+
+//    var chatMessages:[(String, String)] = [] // = [] [("rpaskin","oi"), ("jsilva","tudo bom?"), ("rpaskin", "tudo"), ("ssalgado", "alguém quer um doce?")]
 
     var cores:[UIColor] = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.15), .white]
 
     @IBOutlet weak var chatTableView: UITableView!
     @IBOutlet weak var inputText: UITextField!
 
-    var chatMessages = [("rpaskin","oi"), ("jsilva","tudo bom?"), ("rpaskin", "tudo"), ("ssalgado", "alguém quer um doce?")]
-    
     // Return pressed inside input text
     @IBAction func inputTextReturnPressed(_ sender: UITextField) {
         sendToServer()
@@ -28,13 +28,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func enviarTouched(_ sender: UIButton) {
         sendToServer()
     }
+
     func sendToServer() {
         if inputText.hasText {
             let name = "rpaskin"
             let message = inputText.text!
             
-            chatMessages.insert((name, message), at: 0) // adds to top of list
-            // chatMessages.append((name, message))     // adds to end of list (NOT)
+            chat.messages.insert((name, message), at: 0) // adds to top of list
+            // chat.messages.append((name, message))     // adds to end of list (NOT)
             chatTableView.reloadData()
             
             inputText.text = ""
@@ -68,9 +69,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     let name = response.object(forKey: "uid")! as! String
                     let text = response.object(forKey: "text")! as! String
                     
-                    //                    self.chatMessages.append((name, text))
-                    self.chatMessages.insert((name, text), at: 0)
-                    //                    self.chatMessages.append((name, text))
+                    //                    self.chat.messages.append((name, text))
+                    self.chat.messages.insert((name, text), at: 0)
+                    //                    self.chat.messages.append((name, text))
                     
                     self.chatTableView.reloadData()
                 }
@@ -86,13 +87,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatMessages.count
+        return chat.messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "cell") as! chatTableViewCell
         
-        let (name, message) = chatMessages[indexPath.row]
+        let (name, message) = chat.messages[indexPath.row]
         
         cell.sender.text = name
         cell.msg.text = message
@@ -104,11 +105,14 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
+        print("108 ChatViewController")
+        print(chat)
+
         chatTableView.delegate = self
         chatTableView.dataSource = self
         
-        chatMessages = chatMessages.reversed()
+        chat.messages = chat.messages.reversed()
         
         chatTableView.rowHeight = UITableViewAutomaticDimension
         chatTableView.estimatedRowHeight = 100
