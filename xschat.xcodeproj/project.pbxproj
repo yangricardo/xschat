@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A26D2932064623B00476BC4 /* chatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26D2922064623B00476BC4 /* chatTableViewCell.swift */; };
-		0A2F0E832084FF600055F403 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F0E822084FF600055F403 /* LoginViewController.swift */; };
 		0A2F0E87208534CB0055F403 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F0E86208534CB0055F403 /* ChatViewController.swift */; };
 		0A2F0E8A208537D60055F403 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F0E89208537D60055F403 /* Chat.swift */; };
 		0AA07DB62063F141006E6557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA07DB52063F141006E6557 /* AppDelegate.swift */; };
@@ -16,12 +15,12 @@
 		0AA07DBB2063F141006E6557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DB92063F141006E6557 /* Main.storyboard */; };
 		0AA07DBD2063F141006E6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DBC2063F141006E6557 /* Assets.xcassets */; };
 		0AC7491F20868721009C64B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7491E20868721009C64B4 /* LaunchScreen.storyboard */; };
+		0AC74923208695D4009C64B4 /* LoginViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC74922208695D4009C64B4 /* LoginViewController2.swift */; };
 		8F2EBE6D34BE8467C075E72C /* Pods_xschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A26D2922064623B00476BC4 /* chatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatTableViewCell.swift; sourceTree = "<group>"; };
-		0A2F0E822084FF600055F403 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = /Users/rpaskin/Desktop/XCode/All/xschat/xschat/Controller/LoginViewController.swift; sourceTree = "<absolute>"; };
 		0A2F0E86208534CB0055F403 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0A2F0E89208537D60055F403 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		0AA07DB22063F141006E6557 /* xschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +30,7 @@
 		0AA07DBC2063F141006E6557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AA07DC12063F141006E6557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC7491E20868721009C64B4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AC74922208695D4009C64B4 /* LoginViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController2.swift; sourceTree = "<group>"; };
 		6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xschat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1AA7C01A1DBF2EAFD16CBD /* Pods-xschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-xschat/Pods-xschat.release.xcconfig"; sourceTree = "<group>"; };
 		FCDB9D3E0B9140BB54539214 /* Pods-xschat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xschat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xschat/Pods-xschat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,10 +52,10 @@
 			isa = PBXGroup;
 			children = (
 				0AA07DB52063F141006E6557 /* AppDelegate.swift */,
-				0A2F0E822084FF600055F403 /* LoginViewController.swift */,
 				0A26D2922064623B00476BC4 /* chatTableViewCell.swift */,
 				0A2F0E86208534CB0055F403 /* ChatViewController.swift */,
 				0AA07DB72063F141006E6557 /* ViewController.swift */,
+				0AC74922208695D4009C64B4 /* LoginViewController2.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2F0E832084FF600055F403 /* LoginViewController.swift in Sources */,
+				0AC74923208695D4009C64B4 /* LoginViewController2.swift in Sources */,
 				0AA07DB82063F141006E6557 /* ViewController.swift in Sources */,
 				0AA07DB62063F141006E6557 /* AppDelegate.swift in Sources */,
 				0A2F0E8A208537D60055F403 /* Chat.swift in Sources */,
