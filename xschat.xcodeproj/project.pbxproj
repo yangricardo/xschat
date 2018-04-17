@@ -15,7 +15,7 @@
 		0AA07DB82063F141006E6557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA07DB72063F141006E6557 /* ViewController.swift */; };
 		0AA07DBB2063F141006E6557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DB92063F141006E6557 /* Main.storyboard */; };
 		0AA07DBD2063F141006E6557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DBC2063F141006E6557 /* Assets.xcassets */; };
-		0AA07DC02063F141006E6557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA07DBE2063F141006E6557 /* LaunchScreen.storyboard */; };
+		0AC7491F20868721009C64B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7491E20868721009C64B4 /* LaunchScreen.storyboard */; };
 		8F2EBE6D34BE8467C075E72C /* Pods_xschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +29,8 @@
 		0AA07DB72063F141006E6557 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AA07DBA2063F141006E6557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AA07DBC2063F141006E6557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0AA07DBF2063F141006E6557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AA07DC12063F141006E6557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AC7491E20868721009C64B4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E246B4B20DF24CEB7266D04 /* Pods_xschat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xschat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1AA7C01A1DBF2EAFD16CBD /* Pods-xschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-xschat/Pods-xschat.release.xcconfig"; sourceTree = "<group>"; };
 		FCDB9D3E0B9140BB54539214 /* Pods-xschat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xschat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xschat/Pods-xschat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				0AA07DB92063F141006E6557 /* Main.storyboard */,
-				0AA07DBE2063F141006E6557 /* LaunchScreen.storyboard */,
+				0AC7491E20868721009C64B4 /* LaunchScreen.storyboard */,
 				0AA07DBC2063F141006E6557 /* Assets.xcassets */,
 			);
 			path = View;
@@ -186,7 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA07DC02063F141006E6557 /* LaunchScreen.storyboard in Resources */,
+				0AC7491F20868721009C64B4 /* LaunchScreen.storyboard in Resources */,
 				0AA07DBD2063F141006E6557 /* Assets.xcassets in Resources */,
 				0AA07DBB2063F141006E6557 /* Main.storyboard in Resources */,
 			);
@@ -271,14 +271,6 @@
 				0AA07DBA2063F141006E6557 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0AA07DBE2063F141006E6557 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AA07DBF2063F141006E6557 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
