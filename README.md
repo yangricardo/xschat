@@ -1,0 +1,3 @@
+# xschat
+
+aiml id: eudofuturo
